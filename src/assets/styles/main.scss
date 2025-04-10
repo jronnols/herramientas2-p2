@@ -6,12 +6,13 @@
 /**
  * Import variables
  */
-@import "variables";
+@import "base/variables";
 
 /**
  * Import npm dependencies
  */
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
+@import "bootstrap/scss/bootstrap.scss";
 
 /**
  * Import themes
@@ -21,8 +22,9 @@
 /**
  * Import base
  */
- @import "base/functions";
- @import "base/base";
+@import "base/functions";
+@import "base/base";
+@import "base/bootstrap_override";
 
 /**
  * Import layouts
