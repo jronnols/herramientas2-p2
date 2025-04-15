@@ -9,9 +9,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /**
+ * Import themes
+ */
+ @import "theme/default";
+
+ /**
  * Import variables
  */
 @import "base/variables";
+@import "base/bootstrap_override";
 
 /**
  * Import npm dependencies
@@ -20,16 +26,10 @@
 @import "bootstrap/scss/bootstrap.scss";
 
 /**
- * Import themes
- */
-@import "theme/default";
-
-/**
  * Import base
  */
 @import "base/functions";
 @import "base/base";
-@import "base/bootstrap_override";
 
 /**
  * Import layouts
