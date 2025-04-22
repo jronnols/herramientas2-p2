@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>Contacto</title>
+</head>
+
+<body>
+  <include src="./views/header.html"></include>
+
+  <main class="contact">
+    <h2 class="contact__title">Contacto</h2>
+    <p class="contact__description">¿Tienes dudas o quieres más información? ¡Escríbenos!</p>
+
+    <form name="herramientas2-p2-contact" method="POST" data-netlify="true" class="contact__form">
+      <div class="contact__field">
+        <label for="name" class="contact__label">Nombre</label>
+        <input id="name" name="name" type="text" class="contact__input" required>
+      </div>
+
+      <div class="contact__field">
+        <label for="email" class="contact__label">Correo electrónico</label>
+        <input id="email" name="email" type="email" class="contact__input" required>
+      </div>
+
+      <div class="contact__field">
+        <label for="message" class="contact__label">Mensaje</label>
+        <textarea id="message" name="message" rows="5" class="contact__input" required></textarea>
+      </div>
+
+      <button type="submit" class="conatct__button btn btn-primary">Enviar</button>
+    </form>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>
