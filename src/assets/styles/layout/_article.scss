@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .article {
     max-width: 1024px;
     margin: 0 auto;
@@ -23,7 +25,7 @@
         max-width: 800px;
 
         &:has(figcaption) {
-            background-color: lighten($bg-color, 10%);
+            color: color.adjust($bg-color, $lightness: 5%);
             border-radius: 8px;
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
@@ -41,7 +43,7 @@
 
     &__caption {
         font-size: 0.9rem;
-        color: gray;
+        color: color.adjust($text-color, $lightness: 25%);
         margin-top: 0.5rem;
     }
 
