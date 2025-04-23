@@ -45,4 +45,7 @@ import JustValidate from 'just-validate';
         errorMessage: 'Mínimo 10 caracteres',
       },
     ]);
+  validator.onSuccess((event) => {
+    event.target.submit();
+  });
 })();
