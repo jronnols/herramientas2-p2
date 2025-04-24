@@ -36,7 +36,7 @@
         max-width: 800px;
 
         &:has(figcaption) {
-            color: color.adjust($bg-color, $lightness: 5%);
+            background-color: $bg-color-light;
             border-radius: 8px;
             border: 1px solid rgba(0, 0, 0, 0.1);
         }

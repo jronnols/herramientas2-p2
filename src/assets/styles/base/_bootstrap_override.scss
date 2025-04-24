@@ -1,6 +1,12 @@
+// Overrides de colores generales
 $theme-colors: (
   "primary": $primary-color,
   "secondary": $secondary-color,
 );
 
+// Overrides del componente list-group
+$list-group-bg: $bg-color-light;
+$list-group-border-color: $primary-color;
+
+// Overrides del componente card
 $card-border-radius: 1rem;
