@@ -9,5 +9,6 @@ $bg-color-light: color.adjust($bg-color, $lightness: 10%);
 
 // Colores de texto
 $text-color: #333;
+$text-color-light: #fff;
 $link-color: $primary-color;
 $link-hover-color: color.scale($primary-color, $lightness: -20%);
