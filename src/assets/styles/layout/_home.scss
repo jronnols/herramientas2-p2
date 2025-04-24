@@ -144,7 +144,7 @@
             }
         }
 
-        @media (min-width: 48em) and (min-height: 27em) {
+        @media (min-width: $poster-min-width) and (min-height: $poster-min-height) {
             &__title {
                 opacity: 1;
             }
