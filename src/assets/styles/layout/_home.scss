@@ -9,8 +9,9 @@
     &__title {
         font-family: $font-header;
         color: $accent-color;
-        font-size: calc(3em + 7vw);
+        font-size: min(calc(3em + 7vw), 6rem);
         margin-bottom: 0.25em;
+        margin-right: 0.25em;
     }
 
     &__subtitle {
@@ -52,19 +53,25 @@
 
     // Grid layout
     @supports (display:grid) {
-        @media (min-width: 42em) and (min-height: 27em) {
+        @media (min-width: $poster-min-width) and (min-height: $poster-min-height) {
             max-width: none;
             padding: 0;
             display: grid;
             grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
-            grid-template-rows: 35vh 40vh 15vh 10vh;
+            grid-template-rows: calc(40vh - 80px) calc(25vh - 80px) calc(15vh - 80px) calc(20vh - 80px);
 
             &__title {
                 grid-column: 3 / 6;
                 grid-row: 1 / 2;
                 z-index: 2;
+                display: flex;
+                align-items: center;
                 padding-left: 0.25em;
                 margin-bottom: initial;
+                margin-top: 0.25em;
+                background-color: color.change($bg-color, $alpha: 0.3);
+                backdrop-filter: blur(2px);
+                border-radius: 0.5em;
             }
 
             &__subtitle {
@@ -94,7 +101,6 @@
             &__link {
                 grid-column: 5 / 6;
                 justify-self: end;
-                align-self: center;
                 margin-bottom: initial;
 
                 &::before {
@@ -109,16 +115,19 @@
 
             &__image {
                 grid-column: 1 / 4;
-                grid-row: 1 / 4;
+                grid-row: 1 / 5;
             }
 
             &__location {
                 grid-column: 3 / 4;
                 grid-row: 3 / 4;
                 z-index: 2;
-                background: $primary-color;
+                background: color.change($primary-color, $alpha: 0.85);
                 text-align: center;
                 display: flex;
+                border-top-left-radius: 2em;
+                border-bottom-left-radius: 2em;
+                padding: 0 1em;
 
                 p {
                     margin: auto;
@@ -126,11 +135,12 @@
             }
 
             &__button {
-                grid-column: 2 / 3;
+                grid-column: 3 / 5;
                 grid-row: 4 / 5;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+                margin: 1.5em;
             }
         }
 

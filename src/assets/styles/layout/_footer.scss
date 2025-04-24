@@ -3,6 +3,7 @@
     color: white;
     text-align: center;
     padding: 1rem;
+    height: $footer-height;
 
     &__container {
         display: flex;
@@ -29,9 +30,13 @@
         font-style: italic;
     }
 
+    &__navlinks {
+        display: flex;
+        gap: 5rem;
+    }
+
     &__link {
         color: $text-color-light;
         font-weight: bold;
     }
-
 }

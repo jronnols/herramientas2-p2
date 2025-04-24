@@ -1,6 +1,6 @@
 .header {
     background-color: $primary-color;
-    min-height: 150px;
+    height: $header-height;
 
     &__navbar {
         max-width: 1024px;
