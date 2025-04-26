@@ -58,10 +58,10 @@
             padding: 0;
             display: grid;
             grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
-            grid-template-rows: calc(40vh - 80px) calc(25vh - 80px) calc(15vh - 80px) calc(20vh - 80px);
+            grid-template-rows: calc(40vh - 60px) calc(25vh - 60px) calc(15vh - 60px) calc(20vh - 65px);
 
             &__title {
-                grid-column: 3 / 6;
+                grid-column: 3 / 5;
                 grid-row: 1 / 2;
                 z-index: 2;
                 display: flex;
@@ -92,7 +92,7 @@
 
             &__text {
                 grid-column: 5 / 6;
-                grid-row: 2;
+                grid-row: 2 / 3;
                 align-self: end;
                 padding-bottom: 4vh;
                 margin-bottom: initial;
@@ -100,6 +100,7 @@
 
             &__link {
                 grid-column: 5 / 6;
+                grid-row: 3 / 4;
                 justify-self: end;
                 margin-bottom: initial;
 
