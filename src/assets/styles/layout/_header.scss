@@ -1,21 +1,36 @@
 .header {
+    container-type: size;
     background-color: $primary-color;
     height: $header-height;
 
     &__navbar {
         max-width: 1024px;
-        margin: 0 auto;
+        margin: 10px auto 0 auto;
     }
 
-    &__navlinks {
+    &__navlink {
         font-family: 'Bebas Neue', sans-serif;
         text-transform: uppercase;
         font-size: 1.7rem;
     }
 
     &__logo {
-        height: 120px;
+        height: 65cqh;
         border-radius: 50%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+
+body:has(.home) .header {
+    background-color: $bg-color;
+    border-bottom: $accent-color 2px solid;
+    height: calc($header-height / 2);
+
+    &__navbar {
+        margin: 0 auto;
+    }
+
+    &__navlink {
+        color: $accent-color;
     }
 }
