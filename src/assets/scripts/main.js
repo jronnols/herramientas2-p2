@@ -13,39 +13,41 @@ import JustValidate from 'just-validate';
  */
 
 +(function () {
-  const validator = new JustValidate('.contact__form', {
-    validateBeforeSubmitting: true,
-  });
+  if (document.querySelector('.contact__form')) {
+    const validator = new JustValidate('.contact__form', {
+      validateBeforeSubmitting: true,
+    });
 
-  validator
-    .addField('#name', [
-      {
-        rule: 'required',
-        errorMessage: 'El nombre es obligatorio',
-      },
-    ])
-    .addField('#email', [
-      {
-        rule: 'required',
-        errorMessage: 'El correo es obligatorio',
-      },
-      {
-        rule: 'email',
-        errorMessage: 'Correo inválido',
-      },
-    ])
-    .addField('#message', [
-      {
-        rule: 'required',
-        errorMessage: 'El mensaje no puede estar vacío',
-      },
-      {
-        rule: 'minLength',
-        value: 10,
-        errorMessage: 'Mínimo 10 caracteres',
-      },
-    ]);
-  validator.onSuccess((event) => {
-    event.target.submit();
-  });
+    validator
+      .addField('#name', [
+        {
+          rule: 'required',
+          errorMessage: 'El nombre es obligatorio',
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'required',
+          errorMessage: 'El correo es obligatorio',
+        },
+        {
+          rule: 'email',
+          errorMessage: 'Correo inválido',
+        },
+      ])
+      .addField('#message', [
+        {
+          rule: 'required',
+          errorMessage: 'El mensaje no puede estar vacío',
+        },
+        {
+          rule: 'minLength',
+          value: 10,
+          errorMessage: 'Mínimo 10 caracteres',
+        },
+      ]);
+    validator.onSuccess((event) => {
+      event.target.submit();
+    });
+  }
 })();
