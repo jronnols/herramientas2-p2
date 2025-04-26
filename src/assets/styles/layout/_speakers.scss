@@ -1,5 +1,7 @@
 @layer layout {
     .speakers {
+        container-type: inline-size;
+        container-name: speakers;
         max-width: 1280px;
         margin: 0 auto;
         padding: 2rem 1rem;
@@ -9,6 +11,12 @@
             flex-wrap: wrap;
             gap: 2rem;
             justify-content: center;
+        }
+
+        @container speakers (max-width: 768px) {
+            &__grid {
+                gap: 1rem;
+            }
         }
     }
 }
@@ -48,6 +56,24 @@
             font-size: 1.25rem;
             font-weight: bold;
             margin: 0.5rem 0;
+        }
+
+        @container speakers (max-width: 768px) {
+            &__title {
+                font-size: 2rem;
+            }
+
+            &__text {
+                padding: 5px;
+            }
+
+            &__photo {
+                aspect-ratio: 1/1;
+            }
+
+            &__name {
+                text-align: center;
+            }
         }
     }
 }

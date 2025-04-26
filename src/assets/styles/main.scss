@@ -28,7 +28,9 @@
  * Import npm dependencies
  */
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
-@import "bootstrap/scss/bootstrap";
+@layer reset {
+    @import "bootstrap/scss/bootstrap";
+}
 
 /**
  * Import base

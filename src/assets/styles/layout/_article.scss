@@ -1,6 +1,8 @@
 @use 'sass:color';
 
 .article {
+    container-type: inline-size;
+    container-name: article;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -91,4 +93,13 @@
 
     }
 
+    @container article (max-width: 768px) {
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__image {
+            aspect-ratio: 4 / 3;
+        }
+    }
 }
