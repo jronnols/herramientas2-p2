@@ -6,7 +6,7 @@
 /**
  * Layer definitions
  */
-@layer reset, layout, components;
+@layer reset, bootstrap, layout, components;
 
 /**
  * Import fonts
@@ -28,14 +28,13 @@
  * Import npm dependencies
  */
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
-@layer reset {
+@layer bootstrap {
     @import "bootstrap/scss/bootstrap";
 }
 
 /**
  * Import base
  */
-@import "base/functions";
 @import "base/base";
 
 /**

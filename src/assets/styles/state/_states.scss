@@ -1,1 +1,20 @@
 /* Estados de componentes van aquí */
+
+// If .speakers exists on body, make header__speakers visible with a background as "marked".
+
+.header {
+    body:has(.speakers) &__speakers {
+        background-color: $header-state-color;
+        border-radius: 2em;
+    }
+
+    body:has(.article) &__article {
+        background-color: $header-state-color;
+        border-radius: 2em;
+    }
+
+    body:has(.contact) &__contact {
+        background-color: $header-state-color;
+        border-radius: 2em;
+    }
+}

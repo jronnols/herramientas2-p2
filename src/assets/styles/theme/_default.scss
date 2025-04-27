@@ -6,6 +6,7 @@ $secondary-color: #F9E79F;
 $accent-color: #1D4E89;
 $bg-color: color.scale($secondary-color, $lightness: 90%);
 $bg-color-light: color.adjust($bg-color, $lightness: 10%);
+$header-state-color: color.scale($primary-color, $lightness: -20%);
 
 // Colores de texto
 $text-color: #333;

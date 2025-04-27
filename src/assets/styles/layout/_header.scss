@@ -10,6 +10,7 @@
         font-family: 'Bebas Neue', sans-serif;
         text-transform: uppercase;
         font-size: 1.7rem;
+        text-align: center;
     }
 
     &__logo {
@@ -17,6 +18,15 @@
         border-radius: 50%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+
+    @media (max-width: 574px) {
+        min-height: calc($header-height / 2);
+
+        &__logo {
+            height: 47px;
+        }
+    }
+
 }
 
 body:has(.home) .header {
