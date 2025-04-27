@@ -25,6 +25,7 @@
 
         &__logo {
             height: 47px;
+            width: 47px;
         }
     }
 
@@ -45,5 +46,6 @@ body:has(.home) .header {
 
     &__logo {
         height: 47px;
+        width: 47px;
     }
 }

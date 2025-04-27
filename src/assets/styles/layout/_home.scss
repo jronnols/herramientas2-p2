@@ -19,7 +19,7 @@
     &__subtitle {
         text-transform: uppercase;
         font-size: calc(1em + 0.5vw);
-        color: color.adjust($text-color, $lightness: 50%);
+        color: $text-color;
         margin-bottom: 1em;
     }
 
@@ -80,7 +80,6 @@
                 grid-column: 6 / 7;
                 writing-mode: vertical-rl;
                 margin-bottom: initial;
-                color: $text-color;
             }
 
             &__line {
