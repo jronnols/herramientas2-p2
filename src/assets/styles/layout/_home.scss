@@ -1,7 +1,9 @@
 @use 'sass:color';
 
 .home {
-    max-width: 45em;
+    container-type: inline-size;
+    container-name: home;
+    max-width: 51em;
     margin: 0 auto;
     position: relative;
     padding: 1em;
@@ -9,7 +11,7 @@
     &__title {
         font-family: $font-header;
         color: $accent-color;
-        font-size: min(calc(3em + 7vw), 6rem);
+        font-size: 4rem;
         margin-bottom: 0.25em;
         margin-right: 0.25em;
     }
@@ -70,6 +72,7 @@
                 margin-bottom: initial;
                 margin-top: 0.25em;
                 text-shadow: 0 0 10px $text-color-light;
+                font-size: min(calc(3em + 7vw), 6rem);
             }
 
             &__subtitle {
@@ -152,4 +155,9 @@
         }
     }
 
+    @container home (max-width: 768px) {
+        &__title {
+            font-size: 2rem;
+        }
+    }
 }
