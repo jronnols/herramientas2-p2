@@ -4,6 +4,7 @@
         margin: 0 auto;
         padding: 2rem 1rem;
         container-type: inline-size;
+        container-name: contact;
 
         &__form {
             padding: 5dvh 5cqw;
@@ -13,6 +14,7 @@
             border-radius: 1rem;
             box-shadow: 0 0 10px oklch(30% 0.1 300 / 0.3);
             container-type: inline-size;
+            container-name: contact-form;
 
             display: flex;
             flex-direction: column;
@@ -24,11 +26,10 @@
 @layer component {
     .contact {
         &__title {
-            font-size: 2.5rem;
+            font-size: 4rem;
             font-family: $font-header;
             margin-bottom: 0.5em;
         }
-
 
         &__field {
             display: flex;
@@ -50,6 +51,18 @@
 
             &.just-validate-error-field {
                 border-color: oklch(62% 0.25 25);
+            }
+        }
+
+        @container contact (max-width: 768px) {
+            &__title {
+                font-size: 2rem;
+            }
+        }
+
+        @container contact-form (max-width: 574px) {
+            &__input {
+                width: 100cqw;
             }
         }
     }
